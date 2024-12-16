@@ -128,21 +128,72 @@
           </div>
           <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
             <div class="mb-4">
-              <h3>DayFlow Scheduler</h3>
+              <h3>Project Title: Ambi - A Dynamic Scheduler Software</h3>
               <p>
               An automated scheduler for balancing your tasks within the day!
               </p>
-              <h4>Motivation of the Project</h4>
+              <h3>Motivation Behind the Project</h3>
               <p>
-              Being on top of all your tasks for the day can be challenging. With classes, work, and deadlines, along with making space for your personal life, it's easy to feel overwhelmed. This project allows you to not stress over organizing all your tasks for the day and creates your schedule for the day! 
-              </p>
-              <h4>Functional requirements/what the project does</h4>
-              <p>
-              Project design
+                The idea for Ambi was born from a common challenge many people face: managing time effectively in a busy schedule. Often, people struggle to balance fixed commitments (like work or classes) with flexible tasks (like studying, exercising, or personal hobbies). Traditional scheduling tools can feel rigid, requiring manual effort and failing to adapt to changing priorities.
               </p>
               <p>
-              Implementation
+                My team and I decided to create Ambi as a solution that dynamically organizes a user’s day. It fills gaps between fixed tasks with prioritized flexible tasks, ensuring every moment is used productively. This project was also a great opportunity to refine my programming skills and explore object-oriented design principles while solving a practical problem.
               </p>
+              <h3>What the Project does?</h3>
+              <p>
+                Ambi is designed to:
+
+                1. Allow users to input fixed tasks (e.g., class times, work shifts) with specific start and end times.
+                2. Enable users to add movable tasks (e.g., gym, studying) with durations and priorities.
+                3. Automatically schedule movable tasks into available time slots, prioritizing higher-priority tasks first.
+                4. Incorporate user-defined preferences, such as daily start/end times and break durations.
+                5. Generate and display a clear, organized daily schedule in a user-friendly format.
+              </p>
+              <p>
+                The design of Ambi focuses on modularity and scalability, following object-oriented programming principles:
+                
+                Language: Python, chosen for its simplicity, readability, and strong support for object-oriented programming.
+                Frameworks/Libraries:
+                datetime and timedelta: For time and duration calculations.
+                JSON: For dynamic page configurations in the UI.
+                Class Design:
+                AbstractTask (Parent Class): Defines shared attributes (e.g., name, duration, priority) and methods for both fixed and movable tasks.
+                FixedTask and MovableTask: Subclasses of AbstractTask with unique behaviors like fixed scheduling or dynamic assignment to time slots.
+                Scheduler Class: Handles task management, scheduling, and displaying the final schedule.
+                Preferences Class: Manages user-defined settings like break durations and start/end times.
+                Controller Class: Implements the project’s MVC pattern to handle transitions between pages.
+              </p>
+              <p>
+                Short Overview on Implementation:
+                
+                Task Classes:
+
+                Created the AbstractTask, FixedTask, and MovableTask classes, focusing on clean inheritance and enforcing single-responsibility principles.
+                Ensured tasks have unique indices for easy identification and removal.
+                Developed the to_string method for each task, allowing formatted output for the schedule.
+                Scheduler Logic:
+
+                Implemented the scheduling algorithm to dynamically place movable tasks into free slots based on priority and duration.
+                Added methods for removing tasks by index and sorting tasks for display.
+                UI and Controller:
+
+                Developed the JSON-based navigation system, allowing dynamic page transitions without hardcoding.
+                Integrated the scheduler with the UI for a seamless user experience.
+                Processes Used:
+
+                Object-Oriented Design: Followed OOP principles to create reusable and extensible components.
+                Test-Driven Development (TDD): Wrote test cases for key components like task creation and scheduling logic.
+                Version Control: Managed code using GitHub for collaboration and tracking changes.
+                Feel free to view the full source code on GitHub: GitHub Repository Link
+
+                Visual Highlight
+                Include a screenshot or diagram to enhance the description:
+
+                UI Example: A clear image of the generated schedule or menu system.
+                Diagram: A UML diagram showing the class relationships (e.g., AbstractTask, FixedTask, MovableTask, Scheduler, Preferences).
+
+              </p>   
+
 
 
             </div>
